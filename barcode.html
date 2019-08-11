@@ -12,7 +12,7 @@
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
         <a-assets>
-            <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/wonder0/webXR/master/Model/car.fbx"></a-asset-item>
+            <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/wonder0/webXR/master/Model/aircraft2.gltf"></a-asset-item>
         </a-assets>
 
         <a-marker type='barcode' value='1'>
@@ -21,8 +21,9 @@
 
         <a-marker id="animated-marker" type='barcode' value='6'>
             <a-entity
-                fbx-model="#animated-asset"
-                scale="1">
+                gltf-model="#animated-asset"
+                scale="1"
+				animation-mixer="clip: MyAnimation">
             </a-entity>
         </a-marker>
 
